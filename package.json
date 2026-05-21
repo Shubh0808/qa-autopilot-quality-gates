@@ -1,0 +1,19 @@
+{
+  "name": "qa-autopilot-quality-gates",
+  "version": "1.0.0",
+  "description": "Advanced testing platform that evaluates API contracts, performance budgets, accessibility hints, flake quarantine, and release gates.",
+  "type": "module",
+  "bin": {
+    "qa-autopilot": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "lint": "node --check src/cli.js && node --check src/gates/accessibility.js && node --check src/gates/contract.js && node --check src/gates/flake.js && node --check src/gates/performance.js && node --check src/gates/reporter.js"
+  },
+  "keywords": ["testing", "quality-gates", "contract-testing", "performance", "accessibility"],
+  "author": "Shubh0808",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}

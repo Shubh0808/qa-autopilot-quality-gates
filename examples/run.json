@@ -1,0 +1,44 @@
+{
+  "contract": {
+    "paths": {
+      "/api/incidents": {
+        "get": {
+          "responses": {
+            "200": {
+              "schema": {
+                "required": {
+                  "incidents": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "method": "GET",
+    "path": "/api/incidents",
+    "status": 200,
+    "body": {
+      "incidents": []
+    }
+  },
+  "performance": {
+    "budget": {
+      "p95LatencyMs": 400,
+      "errorRate": 0.02
+    },
+    "samples": [
+      { "latencyMs": 120, "status": 200 },
+      { "latencyMs": 180, "status": 200 },
+      { "latencyMs": 240, "status": 200 },
+      { "latencyMs": 300, "status": 200 }
+    ]
+  },
+  "html": "<main><label>Name<input name=\"name\"></label><img src=\"chart.png\" alt=\"Coverage trend\"></main>",
+  "testHistory": {
+    "api opens incident": ["pass", "pass", "pass", "pass", "pass"],
+    "checkout payment retry": ["pass", "fail", "pass", "fail", "pass"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "qa-autopilot-quality-gates",
+  "description": "Advanced testing platform that evaluates API contracts, performance budgets, accessibility hints, flake quarantine, and release gates.",
+  "topics": [
+    "testing",
+    "quality-engineering",
+    "contract-testing",
+    "performance",
+    "accessibility",
+    "ci-cd",
+    "nodejs"
+  ]
+}
